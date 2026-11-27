@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff7ed" />
+    <meta name="description" content="ใจฉัน — แบบทดสอบสไตล์ของคุณ 24 คำถามที่ค่อย ๆ เปลี่ยนบรรยากาศตามคำตอบของคุณ" />
+    <meta property="og:title" content="ใจฉัน — แบบทดสอบสไตล์ของคุณ" />
+    <meta property="og:description" content="ลองสำรวจสไตล์ที่เป็นคุณ ผ่านคำถามสั้น ๆ 24 ข้อ" />
+    <meta property="og:type" content="website" />
+    <title>ใจฉัน — แบบทดสอบสไตล์ของคุณ</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main id="app" class="app-shell">
+      <div class="ambient ambient-one" aria-hidden="true"></div>
+      <div class="ambient ambient-two" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+
+      <header class="topbar">
+        <button class="brand" type="button" data-action="home" aria-label="กลับหน้าแรก">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>ใจฉัน</span>
+        </button>
+        <div class="topbar-note"><span class="sparkle" aria-hidden="true">✦</span> ทายใจแบบเบา ๆ</div>
+      </header>
+
+      <section id="home-screen" class="screen home-screen" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> 24 คำถาม · ประมาณ 4–6 นาที</p>
+          <h1 id="hero-title">ค่อย ๆ รู้จัก<br /><em>ใจของคุณ</em></h1>
+          <p class="hero-lede">คำตอบเล็ก ๆ ของคุณจะค่อย ๆ แต่งสีให้โลกใบนี้ จนกลายเป็นสไตล์ที่มีแค่คุณเท่านั้น</p>
+          <div class="hero-actions">
+            <button class="primary-button" type="button" data-action="start">
+              เริ่มสำรวจตัวเอง <span class="button-arrow" aria-hidden="true">↗</span>
+            </button>
+            <span class="tiny-note"><span aria-hidden="true">⌁</span> ไม่มีคำตอบผิด</span>
+          </div>
+          <div class="trust-line">
+            <span class="avatar-stack" aria-hidden="true"><i>◒</i><i>◓</i><i>◑</i></span>
+            <span>เล่นเพื่อความสนุกและเข้าใจตัวเองขึ้นอีกนิด</span>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="ภาพประกอบการสำรวจตัวเอง" role="img">
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <div class="sun-disc"><span>✦</span></div>
+          <div class="floating-card card-top"><span class="mini-icon pink">♡</span><b>ความรู้สึก</b><small>มีพื้นที่ให้มันเสมอ</small></div>
+          <div class="floating-card card-bottom"><span class="mini-icon blue">↗</span><b>ความเป็นคุณ</b><small>ไม่ต้องเหมือนใคร</small></div>
+          <div class="plant plant-left" aria-hidden="true"><span class="pot"></span><i></i><i></i><i></i></div>
+          <div class="plant plant-right" aria-hidden="true"><span class="pot"></span><i></i><i></i></div>
+          <div class="hero-sticker sticker-one" aria-hidden="true">อืม...</div>
+          <div class="hero-sticker sticker-two" aria-hidden="true">น่าสนใจนะ!</div>
+        </div>
+      </section>
+
+      <section id="quiz-screen" class="screen quiz-screen" aria-labelledby="question-title" hidden>
+        <div class="quiz-header">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot"></span> กำลังวาดแผนที่ใจของคุณ</p>
+            <div class="progress-meta"><span id="question-count">คำถาม 01 / 24</span><span id="progress-percent">4%</span></div>
+          </div>
+          <button class="icon-button" type="button" data-action="home" aria-label="ออกจากแบบทดสอบ">×</button>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="progress-bar" class="progress-bar"></div></div>
+
+        <div class="quiz-layout">
+          <aside class="mood-panel">
+            <div class="mood-orb"><span id="mood-symbol">✦</span></div>
+            <p class="mood-kicker">บรรยากาศตอนนี้</p>
+            <h2 id="mood-title">ยังอ่านใจไม่ออก</h2>
+            <p id="mood-description">ตอบไปเรื่อย ๆ แล้วฉากนี้จะค่อย ๆ เป็นของคุณมากขึ้น</p>
+            <div class="mood-lines" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="axis-chip" id="axis-chip">กำลังสำรวจทุกมุมของคุณ</div>
+          </aside>
+
+          <div class="question-panel">
+            <div class="question-number" id="question-number">01</div>
+            <p class="question-axis" id="question-axis">พลังงานของคุณ</p>
+            <h2 id="question-title">ในวันว่างที่ไม่มีนัด คุณมักจะ...</h2>
+            <p class="question-hint">เลือกว่าประโยคนี้ตรงกับคุณแค่ไหน ไม่มีคำตอบที่ผิด · เลือก 1 ใน 5 ระดับ</p>
+            <div class="answer-scale" id="answer-scale" role="radiogroup" aria-label="ระดับความตรงกับตัวเอง"></div>
+            <div class="scale-labels"><span>ไม่ใช่ฉันเลย</span><span>ใช่ฉันมาก</span></div>
+            <div class="quiz-footer"><button class="back-button" type="button" data-action="back" aria-label="ย้อนกลับไปแก้คำตอบข้อก่อนหน้า">← ย้อนกลับ</button><span id="selection-status">ยังไม่ได้เลือกคำตอบ</span><span class="keyboard-hint">กด 1–5 ได้เลย</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="result-screen" class="screen result-screen" aria-labelledby="result-title" hidden>
+        <div class="result-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot"></span> ภาพสะท้อนจากคำตอบของคุณ</p>
+            <h1>คุณคือ <em id="result-type-code">—</em></h1>
+          </div>
+          <button class="icon-button" type="button" data-action="home" aria-label="กลับหน้าแรก">×</button>
+        </div>
+
+        <div class="result-hero">
+          <div class="result-badge" id="result-badge"><span id="result-symbol">✦</span><small>สไตล์ของคุณ</small></div>
+          <div class="result-intro">
+            <p class="result-label" id="result-group">กลุ่มที่มีลายเส้นเป็นของตัวเอง</p>
+            <h2 id="result-title">ชื่อสไตล์</h2>
+            <p id="result-tagline">คำอธิบายสั้น ๆ ที่ทำให้รู้สึกว่าใช่</p>
+            <div id="result-tags" class="tag-row"></div>
+          </div>
+        </div>
+
+        <div class="result-grid">
+          <article class="result-card result-card-wide">
+            <div class="card-heading"><span class="card-icon coral">✦</span><div><p>ภาพรวมของคุณ</p><h3>โลกข้างในที่น่าค้นพบ</h3></div></div>
+            <p id="result-description" class="result-description"></p>
+          </article>
+          <article class="result-card">
+            <div class="card-heading"><span class="card-icon mint">↗</span><div><p>จุดเด่น</p><h3>สิ่งที่คุณพกติดตัว</h3></div></div>
+            <ul id="result-strengths" class="strength-list"></ul>
+          </article>
+          <article class="result-card">
+            <div class="card-heading"><span class="card-icon lilac">⌁</span><div><p>พื้นที่พลังใจ</p><h3>บรรยากาศที่ใช่</h3></div></div>
+            <p id="result-vibe" class="vibe-copy"></p>
+            <div id="result-vibe-tags" class="vibe-tags"></div>
+          </article>
+        </div>
+
+        <div class="axis-results">
+          <div class="axis-results-heading"><div><p class="eyebrow"><span class="eyebrow-dot"></span> ลายเส้นของคุณ</p><h2>สี่แกนที่ประกอบกันเป็นคุณ</h2></div><span>เป็นแนวโน้ม ไม่ใช่กรอบจำกัด</span></div>
+          <div id="axis-bars" class="axis-bars"></div>
+        </div>
+
+        <div class="result-actions">
+          <button class="primary-button" type="button" data-action="restart">ลองอีกครั้ง <span class="button-arrow" aria-hidden="true">↗</span></button>
+          <button class="secondary-button" type="button" data-action="share"><span aria-hidden="true">⌁</span> แชร์ผลลัพธ์</button>
+        </div>
+        <p class="disclaimer">แบบทดสอบนี้สร้างขึ้นเพื่อความบันเทิงและการสะท้อนตัวเองเบื้องต้น ไม่ใช่การวินิจฉัยหรือแบบทดสอบทางจิตวิทยามาตรฐาน ผลลัพธ์อาจเปลี่ยนได้ตามประสบการณ์และช่วงเวลาของชีวิต</p>
+      </section>
+
+      <footer class="site-footer"><span>ใจฉัน / your tiny inner universe</span><span>ทำด้วยความอ่อนโยนกับทุกคำตอบ</span></footer>
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    </main>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
